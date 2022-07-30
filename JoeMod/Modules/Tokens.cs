@@ -164,7 +164,7 @@ namespace Modules
             #region Special
             LanguageAPI.Add(prefix + "SPECIAL_TOWER_NAME", "Tesla Tower");
             string target = Modules.Config.TowerTargeting.Value ? "targeted" : "nearby";
-            LanguageAPI.Add(prefix + "SPECIAL_TOWER_DESCRIPTION", $"Construct a Tesla Tower for {Helpers.UtilityText($"{TowerLifetime.LifeDuration} seconds")} that zaps {target} units for {Helpers.DamageText($"3x{TowerZap.DamageCoefficient*100}% damage")}. Use {Helpers.UtilityText("2000 Volts")} while near a tower to perform an {Helpers.UtilityText("empowered, shocking")} version for {Helpers.DamageValueText(TowerBigZap.DamageCoefficient)}.");
+            LanguageAPI.Add(prefix + "SPECIAL_TOWER_DESCRIPTION", $"Construct a {Helpers.DamageText($"'Splat Approved'")} Tesla Tower {Helpers.HealthText($"provided by a powerful Fairy")} that zaps {target} units for {Helpers.DamageText($"3x{TowerZap.DamageCoefficient*100}% damage")}. Use {Helpers.UtilityText("2000 Volts")} while near a tower to perform an {Helpers.UtilityText("empowered, shocking")} version for {Helpers.DamageValueText(TowerBigZap.DamageCoefficient)}.");
             #endregion
 
             #region recolor

@@ -16,7 +16,7 @@ namespace ModdedEntityStates.TeslaTrooper.Tower
             base.PlayAnimation("Body", "ConstructionComplete", "construct.playbackRate", this.duration);
             base.OnEnter();
 
-            characterBody.AddBuff(RoR2Content.Buffs.HiddenInvincibility);
+            //characterBody.AddBuff(RoR2Content.Buffs.HiddenInvincibility);
 
             TeslaTowerControllerController controller = characterBody.master.minionOwnership?.ownerMaster.GetBodyObject()?.GetComponent<TeslaTowerControllerController>();
 

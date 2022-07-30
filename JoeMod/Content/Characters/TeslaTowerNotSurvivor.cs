@@ -19,7 +19,7 @@ namespace Modules.Survivors {
         public const string TOWER_PREFIX = FacelessJoePlugin.DEV_PREFIX + "_TESLA_TOWER_BODY_";
 
         public override BodyInfo bodyInfo { get; set; } = new BodyInfo {
-            armor = 1200f,
+            armor = 150f,
             armorGrowth = 0f,
             bodyName = "TeslaTowerBody",
             bodyNameToken = TOWER_PREFIX + "NAME",
@@ -32,7 +32,7 @@ namespace Modules.Survivors {
             
             maxHealth = 200f,
             healthRegen = 0f,
-            damage = 12f,
+            damage = 7f,
             moveSpeed = 0,
             jumpCount = 0,
             
@@ -46,6 +46,7 @@ namespace Modules.Survivors {
         public override CustomRendererInfo[] customRendererInfos { get; set; }
         
         public override Type characterMainState => typeof(TowerIdleSearch);
+
         public override Type characterSpawnState => typeof(TowerSpawnState);
 
         public override ItemDisplaysBase itemDisplays => new TeslaTowerItemDisplays();

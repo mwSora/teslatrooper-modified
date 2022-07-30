@@ -240,7 +240,7 @@ namespace Modules.Survivors
                 activationState = new EntityStates.SerializableEntityStateType(typeof(DeployTeslaTower)),
                 activationStateMachineName = "Weapon",
                 baseMaxStock = 1,
-                baseRechargeInterval = 24f,
+                baseRechargeInterval = 30f,
                 beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
@@ -270,7 +270,7 @@ namespace Modules.Survivors
                 activationState = new EntityStates.SerializableEntityStateType(typeof(DeployTeslaTower)),
                 activationStateMachineName = "Weapon",
                 baseMaxStock = 1,
-                baseRechargeInterval = 24f,
+                baseRechargeInterval = 30f,
                 beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
@@ -465,9 +465,6 @@ namespace Modules.Survivors
 
             //keep tower from drawing aggro
             GameObject originalAttacker = damageReport.damageInfo.attacker;
-            if (damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("TeslaTowerBody")) {
-                damageReport.damageInfo.attacker = null;
-            }
 
             //keep allies from retaliating against trooper charging them
             bool originalNeverRetaliate = self.neverRetaliateFriendlies;
